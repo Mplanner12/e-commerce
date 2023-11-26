@@ -1,15 +1,60 @@
-This is a [Next.js] E-commerce web App(https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+# E-Commerce
+
+## Overview
+
+This is a side team project to showcase and master some skills
+## Features
+
+
+- viewing products listing 
+- exploring selections 
+- creating profiles
+- viewing feedbacks
+- Adding to cart 
+- Making payment 
+
+## Technologies Used
+
+Specify the technologies and frameworks used in the project.
+
+- Frontend: [Next jjs]
+- Backend: [Nextjs(node js)]
+- Database: [Firebase, mySql]
+- ...
 
 ## Getting Started
-## 
-First, run the development server:
 
-```bash
-yarn dev
+Provide instructions on how to set up and run the project locally.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Clone the repository: `git clone []`
+2. Install dependencies: `yarn install`
+3. Configure environment variables.
+4. Run migrations: `python manage.py migrate`
+5. Start the development server: `yarn start` or `python manage.py runserver`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Database Schema
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
 
+Offer guidance on deploying the application to a production environment.
+
+1. Set up a production database.
+2. Configure production environment variables.
+3. Serve the application using [production server/localhost :300].
+4. ...
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature`
+3. Make changes and commit: `git commit -m "Description of changes"`
+4. Push to the branch: `git push origin feature/your-feature`
+5. Open a pull request.
+
+## License
+
+@plannorium 2023 
+
+Feel free to customize this template based on the specifics of your e-commerce project.
