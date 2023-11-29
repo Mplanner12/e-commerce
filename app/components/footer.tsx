@@ -9,7 +9,7 @@ const Footer = () => {
       <ul className="p-[2rem] w-full grid grid-cols-2 md:flex md:justify-around">
         {siteConfig.footer.map((link) => (
           <Link
-            key={link.href}
+            key={link.id}
             className="p-[0.35rem] md:p-[0.75rem] shadow-md text-[0.65rem] md:text-[1rem]"
             href={link.href}
           >
