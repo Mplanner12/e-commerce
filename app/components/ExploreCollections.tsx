@@ -3,12 +3,12 @@
 import React from "react";
 import { Carousel, Typography, Button } from "./Providers";
 import Image from "next/image";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import ClothingCollection from "./ClothingCollection";
 
 const ExploreCollections = () => {
   return (
-    <section>
+    <section className="full">
       <ClothingCollection />
       <div className="flex justify-end gap-x-[0.35rem]">
         <h1 className="flex justify-end text-white text-lg md:text-2xl mb-3">
@@ -20,7 +20,7 @@ const ExploreCollections = () => {
       </div>
       <Carousel
         transition={{ duration: 2 }}
-        className="rounded-[2rem] h-[35rem] overflow-hidden"
+        className="rounded-[2rem] h-[35rem] overflow-hidden w-full mx-auto"
       >
         <div className="relative h-full w-full">
           <img

@@ -7,7 +7,7 @@ const ImageMarque = () => {
     <div className="mt-[2rem]">
       <ul className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 p-2 gap-x-4 gap-y-4 md:gap-y-0">
         {inventory.map((cloth, index) => (
-          <li key={cloth.id} className="rounded-xl bg-blue-500 w-full">
+          <li key={cloth.id} className="rounded-xl bg-cyan-800 w-full">
             <Image
               className="mx-auto"
               src={cloth.image}
