@@ -9,7 +9,7 @@ import Hero from "./components/Hero";
 
 export default function Home() {
   return (
-    <main className="mx-auto min-h-screen p-5">
+    <main className="mx-auto min-h-screen">
       {/* <h1 className="text-3xl text-center font-extrabold p-[1.75rem]">
         {siteConfig.name}
       </h1>

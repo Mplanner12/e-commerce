@@ -15,13 +15,13 @@ const Hero = () => {
   ];
 
   return (
-    <div className='rounded-[2rem] overflow-hidden mb-8'>
+    <div className='overflow-hidden mb-8'>
       <Navbar />
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
+        // navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
