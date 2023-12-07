@@ -16,9 +16,9 @@ export default function Home() {
       <h2 className="text-lg font-medium text-center">
         {siteConfig.description}
       </h2>
-      <NewArrrivals />
-      </h2> */}
+    </h2> */}
       <Hero />
+      <NewArrrivals />
       <ExploreCollections />
       <FollowUs />
       <ImageMarque />
