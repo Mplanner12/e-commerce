@@ -1,6 +1,6 @@
 // Hero.tsx
 import React from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,13 +18,14 @@ const Hero = () => {
     <div className='overflow-hidden mb-8'>
       <Navbar />
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         // navigation
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
+        autoplay={{ delay: 5000, disableOnInteraction: false }} // Autoplay configuration
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>

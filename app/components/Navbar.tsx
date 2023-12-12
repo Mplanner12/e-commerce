@@ -1,5 +1,6 @@
 // Navbar.tsx
 import React from 'react';
+import { signInWithGoogle } from '../lib/firebaseAuth';
 
 const Navbar = () => {
   return (
@@ -23,9 +24,12 @@ const Navbar = () => {
 
         {/* Login and Cart Links on the right */}
         <div className="flex items-center space-x-4 bg-gray-600 py-1 px-4 rounded-full">
-          <a href="#" className="text-white">
+          <button 
+            onClick={() => signInWithGoogle()}
+            className="text-white"
+          >
             Login
-          </a>
+          </button>
           <a href="#" className="text-white">
             Cart
           </a>
