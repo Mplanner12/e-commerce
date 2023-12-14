@@ -10,7 +10,7 @@ const Footer = () => {
         {siteConfig.footer.map((link) => (
           <Link
             key={link.id}
-            className="p-[0.35rem] md:p-[0.75rem] shadow-md text-[0.65rem] md:text-[1rem]"
+            className="p-[0.35rem] md:p-[0.75rem] shadow-md text-[0.65rem] md:text-[1rem] text-white"
             href={link.href}
           >
             {link.name}

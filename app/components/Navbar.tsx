@@ -1,8 +1,43 @@
 // Navbar.tsx
-import React from 'react';
-import { signInWithGoogle } from '../lib/firebaseAuth';
+import React, { useEffect, useState } from 'react';
+import { signInWithGoogle, auth } from '../lib/firebaseAuth';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log("user eee", user.displayName);
+        
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const router = useRouter();
+
+  const handleSignIn = async () => {
+    try {
+      // Assume signInWithGoogle returns a promise
+      await signInWithGoogle();
+
+      // Redirect to /dashboard on successful authentication
+      router.push('/dashboard');
+    } catch (error) {
+      console.error('Authentication error:', error);
+    }
+  };
+
+  const gotToDashboard = () => {
+    router.push('/dashboard')
+  }
+
   return (
     <nav className="absolute top-4 left-0 right-0 bg-transparent z-50 px-6 lg:px-0">
       <div className="container mx-auto flex items-center justify-between p-4">
@@ -24,12 +59,22 @@ const Navbar = () => {
 
         {/* Login and Cart Links on the right */}
         <div className="flex items-center space-x-4 bg-gray-600 py-1 px-4 rounded-full">
-          <button 
-            onClick={() => signInWithGoogle()}
+          {
+          user ?
+            <button 
+              onClick={gotToDashboard}
+              className="text-white"
+            >
+              Dashboard
+            </button> 
+          :
+            <button 
+            onClick={handleSignIn}
             className="text-white"
-          >
-            Login
-          </button>
+            >
+              Login
+            </button>
+          }
           <a href="#" className="text-white">
             Cart
           </a>
