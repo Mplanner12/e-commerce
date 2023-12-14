@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { siteConfig } from "./config/site";
 import ExploreCollections from "./components/ExploreCollections";
 import FollowUs from "./components/FollowUs";
 import ImageMarque from "./components/ImageMarque";
+import NewArrrivals from "./components/NewArrrivals";
 import Hero from "./components/Hero";
 
 export default function Home() {
@@ -15,8 +15,10 @@ export default function Home() {
       </h1>
       <h2 className="text-lg font-medium text-center">
         {siteConfig.description}
-      </h2> */}
+      </h2>
+    </h2> */}
       <Hero />
+      <NewArrrivals />
       <ExploreCollections />
       <FollowUs />
       <ImageMarque />
