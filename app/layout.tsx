@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "./config/site";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/Providers";
+import Navbar from "./components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className=" bg-black">
       <body className={inter.className}>
         <ThemeProvider>
+          <Navbar />
           {children}
           <Footer />
         </ThemeProvider>
