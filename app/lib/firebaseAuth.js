@@ -1,6 +1,11 @@
 // firebase/auth.js
-import { getAuth, signInWithPopup, signOut, GoogleAuthProvider } from 'firebase/auth';
-import firebaseApp from './firebase';
+import {
+  getAuth,
+  signInWithPopup,
+  signOut,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { firebaseApp } from "./firebase";
 
 const auth = getAuth(firebaseApp);
 const provider = new GoogleAuthProvider();

@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -9,8 +10,13 @@ const firebaseConfig = {
   storageBucket: "clothing-e-commerce-16126.appspot.com",
   messagingSenderId: "252434036379",
   appId: "1:252434036379:web:98e8186a0262120bf8b83e",
-  measurementId: "G-QC2JEZSDGF"
+  measurementId: "G-QC2JEZSDGF",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Init Services
+const db = getFirestore(app);
+
+export { db };
